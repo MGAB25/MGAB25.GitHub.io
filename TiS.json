@@ -7,7 +7,7 @@
   "width": 250,
   "height": 300,
   "title": {
-    "text": "Trade in Services exports by type",
+    "text": "Trade in Services exports by destination",
     "subtitle": "QNA, ONS, Dec 2023",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
@@ -15,7 +15,10 @@
     "color": "black"
   },
   "encoding": {
-    "x": {"field": "Year", "sort": "-y", "type": "ordinal", "title": null},
+    "x": {"field": "Year", 
+     "sort": "-y", 
+     "type": "temporal", 
+     "title": "Year"},
     "y": {
       "field": "Value",
       "title": null,
@@ -25,14 +28,22 @@
     "color": {
       "field": "Source",
       "type": "nominal",
-      "legend": {"orient": "top-right"},
+      "legend": {"orient": "top-left"},
       "scale": {
         "domain": [
           "EU",
           "Non-EU"
         ],
-        "scheme": "yellowgreenblue"
+        "scheme": "orangered"
       },
+      "title": "Exports to"
+    },
+    "tooltip": [
+      {"field": "Value"},
+      {"field": "Source"}
+    ]
+  }
+}
       "title": "Exports to"
     }
   }
