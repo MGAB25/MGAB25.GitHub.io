@@ -1,0 +1,12 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/MGAB25/MGAB25.GitHub.io/main/s5_eco_words.csv"
+  },
+  "mark":{"type": "bar", "color": "teal"},
+  "encoding": {
+    "x": {"field": "count", "type": "quantitative", "axis": {"labelAngle": 0}},
+    "y": {"field": "word", "type": "nominal", "sort":"-x"}
+  }
+}
