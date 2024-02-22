@@ -8,10 +8,10 @@
     "width":300,
     "height":300,
 
-    "mark":{"type": "line","color":"red"},
+    "mark":{"type": "line","color":"purple"},
  
     "encoding": {
       "x": {"field": "Year","type": "temporal"},
-      "y": {"field": "Value","type": "quantitative"}
+      "y": {"field": "Value","type": "quantitative", "scale": {"domain": [40000, 250000]}}
     }
 }
